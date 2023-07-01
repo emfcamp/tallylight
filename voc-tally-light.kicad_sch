@@ -1104,6 +1104,55 @@
         )
       )
     )
+    (symbol "otter:TC2030-CTX-Tag-Connect-ESP32" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+      (property "Reference" "P" (id 0) (at -1.27 -5.08 0)
+        (effects (font (size 1.016 1.016)) (justify left) hide)
+      )
+      (property "Value" "TC2030-CTX-Tag-Connect-ESP32" (id 1) (at 0 5.08 0)
+        (effects (font (size 1.016 1.016)))
+      )
+      (property "Footprint" "" (id 2) (at 0 0 0)
+        (effects (font (size 1.524 1.524)) hide)
+      )
+      (property "Datasheet" "" (id 3) (at 0 0 0)
+        (effects (font (size 1.524 1.524)) hide)
+      )
+      (property "ki_fp_filters" "TC2030*" (id 4) (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "TC2030-CTX-Tag-Connect-ESP32_0_1"
+        (rectangle (start 8.89 3.81) (end -8.89 -3.81)
+          (stroke (width 0) (type default) (color 0 0 0 0))
+          (fill (type background))
+        )
+      )
+      (symbol "TC2030-CTX-Tag-Connect-ESP32_1_1"
+        (pin passive line (at -11.43 2.54 0) (length 2.54)
+          (name "VCC/NC" (effects (font (size 1.016 1.016))))
+          (number "1" (effects (font (size 1.016 1.016))))
+        )
+        (pin passive line (at 11.43 2.54 180) (length 2.54)
+          (name "IO0" (effects (font (size 1.016 1.016))))
+          (number "2" (effects (font (size 1.016 1.016))))
+        )
+        (pin passive line (at -11.43 0 0) (length 2.54)
+          (name "TXD" (effects (font (size 1.016 1.016))))
+          (number "3" (effects (font (size 1.016 1.016))))
+        )
+        (pin passive line (at 11.43 0 180) (length 2.54)
+          (name "RXD" (effects (font (size 1.016 1.016))))
+          (number "4" (effects (font (size 1.016 1.016))))
+        )
+        (pin passive line (at -11.43 -2.54 0) (length 2.54)
+          (name "GND" (effects (font (size 1.016 1.016))))
+          (number "5" (effects (font (size 1.016 1.016))))
+        )
+        (pin passive line (at 11.43 -2.54 180) (length 2.54)
+          (name "EN" (effects (font (size 1.016 1.016))))
+          (number "6" (effects (font (size 1.016 1.016))))
+        )
+      )
+    )
     (symbol "otter:otter_USBLC6-4" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (id 0) (at 0 7.62 0)
         (effects (font (size 1.27 1.27)))
@@ -1289,6 +1338,7 @@
 
   (no_connect (at 44.45 50.8) (uuid 1613aea2-74ff-456a-8f58-2ae446640750))
   (no_connect (at 44.45 53.34) (uuid 1613aea2-74ff-456a-8f58-2ae446640751))
+  (no_connect (at 100.33 66.04) (uuid 359add18-52f8-4e7d-bbf3-e26ef05143b6))
   (no_connect (at 95.25 31.75) (uuid 3a1645b0-5f25-4e28-971e-69c5825f7288))
   (no_connect (at 24.13 82.55) (uuid 625cbe10-ef0b-4626-8e08-705d0b7a35b8))
   (no_connect (at 39.37 82.55) (uuid 625cbe10-ef0b-4626-8e08-705d0b7a35b9))
@@ -1514,12 +1564,6 @@
     (uuid ff09c234-94c6-489c-80b8-83517c55ca7e)
   )
 
-  (text "PoE 802.3af DONE\nLEDs DONE\nProgrammer DONE\n3/4\" Schraube KINDA DONE\n2 x input switch DONE\nEthernet DONE\nParts on bottom side\nwinkekatze on top DONE\nPower over Estrogen"
-    (at 241.3 71.12 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 96ee9b8e-4543-4639-b9ea-44b8baaaf94e)
-  )
-
   (global_label "D-" (shape input) (at 95.25 39.37 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 0819766c-32da-42a6-88c4-ddf1bd84a991)
@@ -1534,10 +1578,24 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
+  (global_label "RXD" (shape input) (at 123.19 68.58 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 1513bd8d-8c6f-450c-8d54-c790c8fd1424)
+    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at -44.45 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
   (global_label "TXD" (shape input) (at 115.57 29.21 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 172c5f04-6919-4eab-86f3-ee25ac112011)
     (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at -52.07 -36.83 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+  (global_label "EN" (shape input) (at 123.19 71.12 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 28e0fcb3-0b13-4c25-bcb9-9f1e081cb9db)
+    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 299.72 144.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
   )
@@ -1604,6 +1662,13 @@
       (effects (font (size 1.27 1.27)) hide)
     )
   )
+  (global_label "IO0" (shape input) (at 123.19 66.04 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 90276a26-ac4c-40ac-bcdf-e323e8e88500)
+    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 316.23 160.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
   (global_label "D+" (shape input) (at 95.25 36.83 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 91e3b171-dc8a-4778-b4d1-3d755cb19bcd)
@@ -1637,6 +1702,13 @@
     (uuid bedf6d2a-5d1f-4d87-ba78-128a2148f40f)
     (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 124.1517 167.5606 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "TXD" (shape input) (at 100.33 68.58 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid da420d31-acb6-4883-88bb-054c12b9c17e)
+    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 267.97 134.62 0)
+      (effects (font (size 1.27 1.27)) hide)
     )
   )
   (global_label "C_BRIGHT" (shape input) (at 191.77 58.42 180) (fields_autoplaced)
@@ -1694,6 +1766,10 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 7442195e-b309-4104-87d4-096c8b6e0583)
   )
+  (hierarchical_label "ETH_RXER" (shape input) (at 114.3 129.54 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 7d185582-06d1-45f1-ad28-c6ab555e9d76)
+  )
   (hierarchical_label "ETH_RXD1" (shape input) (at 236.22 118.11 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 80ae8667-c6ec-4135-a201-80da92ca8ae7)
@@ -1713,6 +1789,10 @@
   (hierarchical_label "PHY_PWR" (shape input) (at 114.3 137.16 0)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid b46a2fba-3b27-46f7-9158-fa5421425c0b)
+  )
+  (hierarchical_label "ETH_RXER" (shape input) (at 236.22 105.41 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid c3f90b23-93b9-40b3-97a4-b13449ebdd78)
   )
   (hierarchical_label "ETH_TXD0" (shape input) (at 236.22 107.95 180)
     (effects (font (size 1.27 1.27)) (justify right))
@@ -2202,6 +2282,29 @@
     (pin "3" (uuid 41903a16-76ea-4af3-87cc-dea7d4847e3d))
   )
 
+  (symbol (lib_id "otter:TC2030-CTX-Tag-Connect-ESP32") (at 111.76 68.58 0) (unit 1)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (uuid 730fca54-e1c5-41ca-a7b2-d87a12488cb6)
+    (property "Reference" "P1" (id 0) (at 110.49 73.66 0)
+      (effects (font (size 1.016 1.016)) (justify left) hide)
+    )
+    (property "Value" "TC2030-CTX-Tag-Connect-ESP32" (id 1) (at 111.76 63.5 0)
+      (effects (font (size 1.016 1.016)))
+    )
+    (property "Footprint" "otter:TC2030" (id 2) (at 111.76 68.58 0)
+      (effects (font (size 1.524 1.524)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 111.76 68.58 0)
+      (effects (font (size 1.524 1.524)) hide)
+    )
+    (pin "1" (uuid f9da6d4a-3ea7-4fb0-831f-d2c6435a6ea4))
+    (pin "2" (uuid 5af25010-21c3-468d-b385-1c5c2f5ad6e7))
+    (pin "3" (uuid a9f108d6-399d-45e3-879c-42586abba3c2))
+    (pin "4" (uuid f01890b6-0256-4793-bc7a-25fe40795e8e))
+    (pin "5" (uuid 8d88bf84-60cb-47eb-89ae-99b426656e1f))
+    (pin "6" (uuid 611442dc-c810-422a-9074-31558ec88dd0))
+  )
+
   (symbol (lib_id "Device:R_Small") (at 127 41.91 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 83353990-3124-4491-83f1-b23544395701)
@@ -2370,6 +2473,22 @@
     (pin "1" (uuid 4b2e091b-2077-4c21-b359-6ba1aed8b5a6))
   )
 
+  (symbol (lib_id "power:GND") (at 100.33 71.12 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid a332fb16-5752-48cc-a700-98c3c1322e70)
+    (property "Reference" "#PWR0112" (id 0) (at 100.33 77.47 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (id 1) (at 100.457 75.5142 0))
+    (property "Footprint" "" (id 2) (at 100.33 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 100.33 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 517ea387-8e57-499b-a8d3-791bebc68e12))
+  )
+
   (symbol (lib_id "Device:R_Small") (at 115.57 107.95 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid a4821325-cdaf-42d8-b573-e281ffdf5a86)
@@ -2428,7 +2547,7 @@
   (symbol (lib_id "Transistor_BJT:BC847") (at 137.16 41.91 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b41dfade-20cd-4e0e-b8d4-fcd6b25de217)
-    (property "Reference" "Q?" (id 0) (at 142.24 40.6399 0)
+    (property "Reference" "Q1" (id 0) (at 142.24 40.6399 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "S8050" (id 1) (at 142.24 43.1799 0)
@@ -2501,7 +2620,7 @@
   (symbol (lib_id "Transistor_BJT:BC847") (at 137.16 54.61 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid c0cec5d0-e16e-4429-a9c9-c2547710fe88)
-    (property "Reference" "Q?" (id 0) (at 142.24 53.3399 0)
+    (property "Reference" "Q2" (id 0) (at 142.24 53.3399 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "S8050" (id 1) (at 142.24 55.8799 0)
@@ -2775,11 +2894,11 @@
     (pin "9" (uuid c4b42900-1724-41ae-9165-c4d470a216da))
   )
 
-  (sheet (at 236.22 105.41) (size 31.75 27.94) (fields_autoplaced)
+  (sheet (at 236.22 104.14) (size 31.75 29.21) (fields_autoplaced)
     (stroke (width 0.1524) (type solid) (color 0 0 0 0))
     (fill (color 0 0 0 0.0000))
     (uuid 1333d312-d78d-4ebd-9477-403ff5d6e1eb)
-    (property "Sheet name" "ETH" (id 0) (at 236.22 104.6984 0)
+    (property "Sheet name" "ETH" (id 0) (at 236.22 103.4284 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
     (property "Sheet file" "poe.kicad_sch" (id 1) (at 236.22 133.9346 0)
@@ -2824,6 +2943,10 @@
     (pin "ETH_TXD0" input (at 236.22 107.95 180)
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid 6415fa0c-403a-4649-8d8b-eeff7126be85)
+    )
+    (pin "ETH_RXER" input (at 236.22 105.41 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 124e48cd-501e-4e13-89d0-962a90dcba93)
     )
   )
 
@@ -2877,14 +3000,14 @@
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/8e9864a3-c048-46c6-a0ba-5dca6ebe6e6e"
       (reference "#PWR0109") (unit 1) (value "GND") (footprint "")
     )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/4c7820b8-4e9e-4e44-aa85-2eb6af0082a8"
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/6dac4f62-f5db-42cf-aa5a-c3f7aff3e21e"
       (reference "#PWR0110") (unit 1) (value "+3V3") (footprint "")
     )
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/05e204fb-ddce-4c5d-8ac7-4ff90ed93c43"
       (reference "#PWR0111") (unit 1) (value "GND") (footprint "")
     )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/7064a9de-6be0-45b4-9b2b-ce5d5f9e64df"
-      (reference "#PWR0112") (unit 1) (value "+3V3") (footprint "")
+    (path "/a332fb16-5752-48cc-a700-98c3c1322e70"
+      (reference "#PWR0112") (unit 1) (value "GND") (footprint "")
     )
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/4728c270-8535-4908-ab6d-75fc721b90c9"
       (reference "#PWR0113") (unit 1) (value "+3V3") (footprint "")
@@ -2934,7 +3057,7 @@
     (path "/d484f7d0-bb31-480f-8f8e-a5d07db87560"
       (reference "#PWR0128") (unit 1) (value "GND") (footprint "")
     )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/053fce17-9918-4b3e-bc43-50fe292c38cf"
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/fba78d20-480f-4f2d-9ac5-e10f67682ada"
       (reference "#PWR0129") (unit 1) (value "+3V3") (footprint "")
     )
     (path "/a2244bf8-5985-4897-b77b-539f483446e6"
@@ -3009,6 +3132,27 @@
     (path "/29f91e05-7235-453b-b506-b2ff48cdb0a7/c2d8faf0-29d0-405b-aa38-5aa1c52e1381"
       (reference "#PWR0153") (unit 1) (value "+5V") (footprint "")
     )
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/8609fe90-9482-4033-863e-0928d312f0fc"
+      (reference "#PWR0154") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/274e4762-990f-4d6d-b98c-2bffddf42859"
+      (reference "#PWR0155") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/f20ee0f3-e73e-404e-a8f0-85f1f862dada"
+      (reference "#PWR0156") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/0613edaa-3d80-4f60-bf16-e58b7f7d266c"
+      (reference "#PWR0157") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/29f91e05-7235-453b-b506-b2ff48cdb0a7/81c83acc-b6dc-4091-bfc2-c006dbedacce"
+      (reference "#PWR0158") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/29f91e05-7235-453b-b506-b2ff48cdb0a7/0aeeb7d1-a318-4cda-9d65-80ecee75c2f1"
+      (reference "#PWR0159") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/78ba0020-0018-41a6-8c97-d62f69d7270a"
+      (reference "#PWR0160") (unit 1) (value "GND") (footprint "")
+    )
     (path "/29f91e05-7235-453b-b506-b2ff48cdb0a7/4f8e4058-58a0-486b-ae20-63482f855999"
       (reference "#PWR0161") (unit 1) (value "+3V3") (footprint "")
     )
@@ -3038,12 +3182,6 @@
     )
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/6d692934-e4ce-480a-bb32-510e2c2dcb97"
       (reference "#PWR0172") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/4df12300-200f-41e8-b6f7-f7168394c79c"
-      (reference "#PWR0173") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/6caefad2-6305-4c34-8bdd-a462f8722a7c"
-      (reference "#PWR0174") (unit 1) (value "+5V") (footprint "")
     )
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/7cd8bc1b-c4ee-4ad3-be44-3231895d90ef"
       (reference "#PWR0175") (unit 1) (value "+3V3") (footprint "")
@@ -3144,17 +3282,17 @@
     (path "/29f91e05-7235-453b-b506-b2ff48cdb0a7/f2f23785-1850-434d-8acd-5a6cb597f01d"
       (reference "C22") (unit 1) (value "100n") (footprint "otter:C_0402")
     )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/5dbe0e28-138f-4e50-bea5-bbaf7d2327e9"
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/c66ef1d6-3ed0-467a-9383-7c7d506f5691"
       (reference "C23") (unit 1) (value "1u") (footprint "otter:C_0603")
     )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/b45f804a-39ec-45ab-8c0a-bf5ff9520a3d"
-      (reference "C24") (unit 1) (value "47uF 100V") (footprint "otter:C_1812")
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/54a62325-0036-4c6d-b6a9-062a472f9a90"
+      (reference "C24") (unit 1) (value "1u") (footprint "otter:C_0603")
     )
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/c666a0a8-f096-4fbf-9147-f83b87ce2055"
       (reference "C25") (unit 1) (value "100n") (footprint "otter:C_0402")
     )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/415df666-b89e-4c69-a5d3-9ef77e488ec3"
-      (reference "C26") (unit 1) (value "100n") (footprint "otter:C_0805")
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/94cb5545-e829-4361-9e77-0191f7a83bad"
+      (reference "C26") (unit 1) (value "47uF 35V") (footprint "otter:C_1812")
     )
     (path "/e635ae29-3509-4cb2-a7fb-d75391b23ce8"
       (reference "C27") (unit 1) (value "100n") (footprint "otter:C_0402")
@@ -3170,6 +3308,12 @@
     )
     (path "/d0be1272-247e-43ab-9485-92e31857363f"
       (reference "C31") (unit 1) (value "1u") (footprint "otter:C_0603")
+    )
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/f59d687b-098a-48ec-bcf6-a9b52fdcc771"
+      (reference "C32") (unit 1) (value "100n") (footprint "otter:C_0805")
+    )
+    (path "/29f91e05-7235-453b-b506-b2ff48cdb0a7/6ce62298-afa5-4311-ba3c-586b130ed84e"
+      (reference "C33") (unit 1) (value "1u") (footprint "otter:C_0603")
     )
     (path "/29f91e05-7235-453b-b506-b2ff48cdb0a7/32ba6ca6-9fb5-43f8-a5a5-15e35c344a9a"
       (reference "D1") (unit 1) (value "SK6805-SIDE-G") (footprint "otter:SK6805-SIDE-G")
@@ -3213,7 +3357,7 @@
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/68c0325f-a39e-4250-a7ff-b5f0c44e19c6"
       (reference "D14") (unit 1) (value "YELLOW") (footprint "otter:LED_0603_1608Metric")
     )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/fb7bf3a7-4cd9-4dcb-8bac-86c2217c08a2"
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/91eb21b5-e34f-4e4f-9e4d-59ba420fbba0"
       (reference "D15") (unit 1) (value "D_TVS") (footprint "otter:SMAF")
     )
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/79597dda-e65e-4688-8699-52dfc07757e8"
@@ -3228,17 +3372,17 @@
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/a56508c0-dcfd-4e0b-91e1-d9aeae82dadf"
       (reference "J3") (unit 1) (value "7498210002") (footprint "otter:7498210002")
     )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/00171825-8f73-4671-afb3-eb55d7e96355"
-      (reference "L1") (unit 1) (value "4u7") (footprint "Inductor_SMD:L_1210_3225Metric")
+    (path "/730fca54-e1c5-41ca-a7b2-d87a12488cb6"
+      (reference "P1") (unit 1) (value "TC2030-CTX-Tag-Connect-ESP32") (footprint "otter:TC2030")
+    )
+    (path "/b41dfade-20cd-4e0e-b8d4-fcd6b25de217"
+      (reference "Q1") (unit 1) (value "S8050") (footprint "Package_TO_SOT_SMD:SOT-23")
+    )
+    (path "/c0cec5d0-e16e-4429-a9c9-c2547710fe88"
+      (reference "Q2") (unit 1) (value "S8050") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
     (path "/29f91e05-7235-453b-b506-b2ff48cdb0a7/9fcbe117-a529-492a-8316-e88ccf513b04"
       (reference "Q3") (unit 1) (value "2N7002") (footprint "Package_TO_SOT_SMD:SOT-23")
-    )
-    (path "/b41dfade-20cd-4e0e-b8d4-fcd6b25de217"
-      (reference "Q?") (unit 1) (value "S8050") (footprint "Package_TO_SOT_SMD:SOT-23")
-    )
-    (path "/c0cec5d0-e16e-4429-a9c9-c2547710fe88"
-      (reference "Q?") (unit 1) (value "S8050") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
     (path "/1aa79038-c1e2-4d3c-86c3-9e6832e818aa"
       (reference "R1") (unit 1) (value "5k1") (footprint "otter:R_0402")
@@ -3257,6 +3401,12 @@
     )
     (path "/90e17ac9-f42d-4e20-873a-97e1e3a08eee"
       (reference "R6") (unit 1) (value "5k1") (footprint "otter:R_0402")
+    )
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/c7c5797d-853a-4b7e-931f-04a33918833e"
+      (reference "R7") (unit 1) (value "DNP") (footprint "Resistor_SMD:R_1210_3225Metric")
+    )
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/eb62184c-fcf3-4bcf-9af4-b9834adfa0bd"
+      (reference "R8") (unit 1) (value "5k1") (footprint "otter:R_0402")
     )
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/8f5cfab3-6d97-4d3e-8fb9-7f2b3b884a79"
       (reference "R9") (unit 1) (value "5k1") (footprint "otter:R_0402")
@@ -3286,10 +3436,10 @@
       (reference "R17") (unit 1) (value "12k1") (footprint "otter:R_0402")
     )
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/01d5f9da-595e-40b9-b460-9b48ff09cfba"
-      (reference "R18") (unit 1) (value "49R9") (footprint "otter:R_0402")
+      (reference "R18") (unit 1) (value "10k") (footprint "otter:R_0402")
     )
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/936b3144-1352-4690-a1d6-6250cd55e9cc"
-      (reference "R19") (unit 1) (value "49R9") (footprint "otter:R_0402")
+      (reference "R19") (unit 1) (value "10k") (footprint "otter:R_0402")
     )
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/e05e4a1b-6bcc-48d1-a916-554478cf0990"
       (reference "R20") (unit 1) (value "49R9") (footprint "otter:R_0402")
@@ -3312,20 +3462,8 @@
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/58eae2fc-af0b-4b1d-ac5a-b02b660c37d0"
       (reference "R26") (unit 1) (value "49R9") (footprint "otter:R_0402")
     )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/73e3c006-d175-4320-be95-660d16fedb0b"
-      (reference "R27") (unit 1) (value "20") (footprint "otter:R_0402")
-    )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/be3da40a-f9a2-4ad4-99ee-12a32a11ee00"
-      (reference "R28") (unit 1) (value "100k") (footprint "otter:R_0402")
-    )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/571f1337-9eae-492e-b072-06dd3646557f"
-      (reference "R29") (unit 1) (value "24k9") (footprint "otter:R_0402")
-    )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/6a652621-6be3-4ebf-afd5-87bf6a24e403"
-      (reference "R30") (unit 1) (value "357") (footprint "otter:R_0402")
-    )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/0533391f-3856-49d0-aac4-2662b8e97277"
-      (reference "R31") (unit 1) (value "178k") (footprint "otter:R_0402")
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/e2a3fa89-a1d3-49c7-aaba-d3b3bfdf5734"
+      (reference "R27") (unit 1) (value "5k1") (footprint "otter:R_0402")
     )
     (path "/5bd35986-e1b2-4342-8afb-c2520b4e83e0"
       (reference "SW2") (unit 1) (value "Mode") (footprint "Button_Switch_SMD:SW_SPDT_PCM12")
@@ -3348,11 +3486,11 @@
     (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/fa5456cc-94eb-4492-937a-46e2a7279fba"
       (reference "U5") (unit 1) (value "LAN8720A") (footprint "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm")
     )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/29e69c8d-0766-47d3-859c-06984d9bcf30"
-      (reference "U6") (unit 1) (value "SPBW03G-05") (footprint "otter:SPBW03G-05")
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/a49a72e1-5ff4-4c16-b0de-6a0bb31c9b27"
+      (reference "U6") (unit 1) (value "AMS1117-5.0") (footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
     )
-    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/0ec93c2c-6e7a-402f-a7c6-2694466e9717"
-      (reference "U7") (unit 1) (value "TPS2375-1") (footprint "Package_SO:TSSOP-8_4.4x3mm_P0.65mm")
+    (path "/1333d312-d78d-4ebd-9477-403ff5d6e1eb/489162d6-0e69-4ae4-becd-0eb2749ca2bd"
+      (reference "U7") (unit 1) (value "DP99xx") (footprint "otter:DP99xx")
     )
     (path "/6fa81494-7bd8-4deb-9684-9a2998e90edc"
       (reference "U8") (unit 1) (value "AP2204R-3.3") (footprint "Package_TO_SOT_SMD:SOT-89-3")
